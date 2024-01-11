@@ -38,7 +38,7 @@ const Header = () => {
             <img className="w-44 h-20" src={logo} alt="logo" />
             {user && (
                 <div className="flex gap-2">
-                    <div className="self-center text-[20px] text-black font-bold">
+                    <div className="self-center text-[20px] text-white font-bold">
                         Hi, {user.displayName}
                     </div>
                     <img className="w-10 h-10 my-auto rounded-xl" alt="icon" src={userLogo} />
