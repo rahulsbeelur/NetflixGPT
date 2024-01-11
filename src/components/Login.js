@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { loginImage } from '../utils/constants';
+import { LOG_IN_IMAGE } from '../utils/constants';
 import Header from './Header';
 import { checkValidData } from '../utils/validate';
 import {
@@ -68,7 +68,7 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img src={loginImage} alt="Background" />
+                <img src={LOG_IN_IMAGE} alt="Background" />
             </div>
             <form
                 onSubmit={(e) => e.preventDefault()}
