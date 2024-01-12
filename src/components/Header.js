@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigate } from 'react-router';
 import { LOGO } from '../utils/constants';
 import { signOut } from 'firebase/auth';
