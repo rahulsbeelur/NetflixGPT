@@ -1,7 +1,7 @@
 const GptSearchBar = () => {
     return (
         <div className="pt-[10%] w-screen h-screen ">
-            <form className="w-1/2 grid grid-cols-12 mx-auto">
+            <form className="w-1/2 grid grid-cols-12 mx-auto" onSubmit={(e) => e.preventDefault()}>
                 <input
                     type="text"
                     className="m-4 p-4 col-span-9"
