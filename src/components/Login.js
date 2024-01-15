@@ -54,9 +54,7 @@ const Login = () => {
                 });
         } else {
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
-                .then(() => {
-                    
-                })
+                .then(() => {})
                 .catch((error) => {
                     const errorMessage = error.message;
                     setErrorMessage(errorMessage);
