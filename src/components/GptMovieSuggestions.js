@@ -5,11 +5,11 @@ const GptMovieSuggestions = () => {
     const { movieNames, movieResults } = useSelector((store) => store.gptSearch);
     if (!movieResults) return;
     return (
-        <div className="mt-[10%] p-4 bg-black bg-opacity-70">
+        <div className="mt-[10%] p-4 bg-black bg-opacity-70 tablet:p-2">
             <div className="text-white">
                 {movieNames.map((movie, index) => (
                     <div key={movie}>
-                        <h1 className="text-2xl px-6 font-bold mobile:px-2 mobile:text-lg">
+                        <h1 className="text-2xl px-6 font-bold mobile:px-2 mobile:text-lg tablet:text-[20px]">
                             Movies Similar to
                         </h1>
                         <MovieList title={movie} movies={movieResults[index]} />

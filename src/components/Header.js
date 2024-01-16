@@ -41,18 +41,18 @@ const Header = () => {
             .catch((error) => {});
     };
     return (
-        <div className="absolute w-screen px-8 py-2 bg-gradient-to-br from-black z-[999] flex justify-between mobile:flex-col mobile:items-center mobile:p-0">
-            <div className="w-full flex justify-between mobile:hidden">
-                <img className="w-44 h-20 mobile:w-[120px] mobile:h-15" src={LOGO} alt="LOGO" />
+        <div className="absolute w-screen px-8 py-2 bg-gradient-to-br from-black z-[999] flex justify-between mobile:flex-col mobile:items-center mobile:p-0 bg-black">
+            <div className="w-full flex justify-between mobile:hidden ">
+                <img className="w-44 h-20 tablet:w-[120px] tablet:h-12" src={LOGO} alt="LOGO" />
                 {user && (
-                    <div className="flex gap-2 mobile:justify-between mobile:w-full">
+                    <div className="flex gap-2 mobile:justify-between">
                         <div className="flex mobile:flex-col-reverse">
                             <button
-                                className="bg-purple-800 hover:bg-purple-950 text-white font-bold p-2 m-2 rounded self-center mobile:text-[14px]"
+                                className="bg-purple-800 hover:bg-purple-950 text-white font-bold p-2 m-2 rounded self-center tablet:text-[14px]"
                                 onClick={handleGptSearchClick}>
                                 {!showGptSearch ? 'GPT Search' : 'Home Page'}
                             </button>
-                            <div className="self-center text-[20px] text-white font-bold mobile:text-[16px]">
+                            <div className="self-center text-[20px] text-white font-bold tablet:text-[14px]">
                                 Hi, {user.displayName}
                             </div>
                         </div>
@@ -65,7 +65,7 @@ const Header = () => {
                             />
                             <button
                                 onClick={handleSignOut}
-                                className="text-[16px] font-bold self-center text-center bg-red-500 m-2 p-2 rounded">
+                                className="text-[16px] font-bold self-center text-center bg-red-500 m-2 p-2 rounded tablet:text-[14px]">
                                 Sign Out
                             </button>
                         </div>
