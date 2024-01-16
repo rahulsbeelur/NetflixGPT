@@ -41,29 +41,77 @@ const Header = () => {
             .catch((error) => {});
     };
     return (
-        <div className="absolute w-screen px-8 py-2 bg-gradient-to-br from-black z-[999] flex justify-between">
-            <img className="w-44 h-20" src={LOGO} alt="LOGO" />
-            {user && (
-                <div className="flex gap-2">
-                    <div className="flex">
-                        <button
-                            className="bg-purple-800 hover:bg-purple-950 text-white font-bold p-2 m-2 rounded self-center"
-                            onClick={handleGptSearchClick}>
-                            {!showGptSearch ? 'GPT Search' : 'Home Page'}
-                        </button>
-                    </div>
-                    <div className="self-center text-[20px] text-white font-bold">
-                        Hi, {user.displayName}
-                    </div>
+        <div className="absolute w-screen px-8 py-2 bg-gradient-to-br from-black z-[999] flex justify-between mobile:flex-col mobile:items-center mobile:p-0">
+            <div className="w-full flex justify-between mobile:hidden">
+                <img className="w-44 h-20 mobile:w-[120px] mobile:h-15" src={LOGO} alt="LOGO" />
+                {user && (
+                    <div className="flex gap-2 mobile:justify-between mobile:w-full">
+                        <div className="flex mobile:flex-col-reverse">
+                            <button
+                                className="bg-purple-800 hover:bg-purple-950 text-white font-bold p-2 m-2 rounded self-center mobile:text-[14px]"
+                                onClick={handleGptSearchClick}>
+                                {!showGptSearch ? 'GPT Search' : 'Home Page'}
+                            </button>
+                            <div className="self-center text-[20px] text-white font-bold mobile:text-[16px]">
+                                Hi, {user.displayName}
+                            </div>
+                        </div>
 
-                    <img className="w-10 h-10 my-auto rounded-xl" alt="icon" src={USER_LOGO} />
-                    <button
-                        onClick={handleSignOut}
-                        className="text-[16px] font-bold self-center text-center bg-red-500 m-2 p-2 rounded">
-                        Sign Out
-                    </button>
-                </div>
-            )}
+                        <div className="flex mobile:flex-col mobile:items-center">
+                            <img
+                                className="w-10 h-10 my-auto rounded-xl mobile:w-8 mobile:h-8"
+                                alt="icon"
+                                src={USER_LOGO}
+                            />
+                            <button
+                                onClick={handleSignOut}
+                                className="text-[16px] font-bold self-center text-center bg-red-500 m-2 p-2 rounded">
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
+            <div className="desktop:hidden tablet:hidden py-2 w-full">
+                {!user && (
+                    <img
+                        className="w-44 h-20 mobile:w-[120px] mobile:h-15 mx-auto"
+                        src={LOGO}
+                        alt="LOGO"
+                    />
+                )}
+                {user && (
+                    <div className="flex gap-2 mobile:justify-between mobile:w-full">
+                        <div className="flex mobile:flex-col-reverse">
+                            <button
+                                className="bg-purple-800 hover:bg-purple-950 text-white font-bold p-2 m-2 rounded self-center text-[14px]"
+                                onClick={handleGptSearchClick}>
+                                {!showGptSearch ? 'GPT Search' : 'Home Page'}
+                            </button>
+                            <div className="self-center text-[20px] text-white font-bold mobile:text-[16px]">
+                                Hi, {user.displayName}
+                            </div>
+                        </div>
+                        <img
+                            className="w-44 h-20 mobile:w-[120px] mobile:h-15"
+                            src={LOGO}
+                            alt="LOGO"
+                        />
+                        <div className="flex mobile:flex-col mobile:items-center">
+                            <img
+                                className="w-10 h-10 my-auto rounded-xl mobile:w-8 mobile:h-8"
+                                alt="icon"
+                                src={USER_LOGO}
+                            />
+                            <button
+                                onClick={handleSignOut}
+                                className="text-[16px] font-bold self-center text-center bg-red-500 m-2 p-2 rounded text-[14px]">
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
