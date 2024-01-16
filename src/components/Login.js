@@ -66,11 +66,15 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img src={LOG_IN_IMAGE} alt="Background" />
+                <img
+                    src={LOG_IN_IMAGE}
+                    alt="Background"
+                    className="mobile:h-screen mobile:object-cover"
+                />
             </div>
             <form
                 onSubmit={(e) => e.preventDefault()}
-                className="p-12 bg-black absolute w-3/12 mt-40 m-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
+                className="p-12 bg-black absolute w-3/12 mt-40 m-auto right-0 left-0 text-white bg-opacity-80 rounded-lg mobile:p-4 mobile:w-full mobile:mt-[50%]">
                 <h1 className="font-bold text-3xl py-4 w-full">
                     {isSignIn ? 'Sign In' : 'Sign Up'}
                 </h1>
@@ -79,24 +83,24 @@ const Login = () => {
                         ref={name}
                         type="text"
                         placeholder="Full Name"
-                        className="p-2 m-2 w-full bg-gray-700"
+                        className="p-2 m-2 w-full bg-gray-700 mobile:m-0 mobile:mt-2"
                     />
                 )}
                 <input
                     ref={email}
                     type="text"
                     placeholder="Email"
-                    className="p-2 m-2 w-full bg-gray-700"
+                    className="p-2 m-2 w-full bg-gray-700 mobile:m-0 mobile:mt-2"
                 />
                 <input
                     ref={password}
                     type="password"
                     placeholder="Password"
-                    className="p-2 m-2 w-full bg-gray-700"
+                    className="p-2 m-2 w-full bg-gray-700 mobile:m-0 mobile:mt-2"
                 />
                 <p className="text-red-500 text-lg p-2">{errorMessage}</p>
                 <button
-                    className="py-4 m-2 mt-6 rounded-lg bg-red-700 w-full"
+                    className="py-4 m-2 mt-6 rounded-lg bg-red-700 w-full mobile:p-2 mobile:m-0"
                     onClick={handleFormSubmission}>
                     {isSignIn ? 'Sign In' : 'Sign Up'}
                 </button>
