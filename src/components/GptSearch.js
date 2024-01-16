@@ -8,7 +8,7 @@ const GptSearch = () => {
                 <img
                     src={LOG_IN_IMAGE}
                     alt="Background"
-                    className="mobile:h-screen mobile:object-cover"
+                    className="w-screen h-screen object-cover"
                 />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>

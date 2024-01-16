@@ -69,12 +69,12 @@ const Login = () => {
                 <img
                     src={LOG_IN_IMAGE}
                     alt="Background"
-                    className="mobile:h-screen mobile:object-cover"
+                    className="w-screen h-screen object-cover"
                 />
             </div>
             <form
                 onSubmit={(e) => e.preventDefault()}
-                className="p-12 bg-black absolute w-3/12 mt-40 m-auto right-0 left-0 text-white bg-opacity-80 rounded-lg mobile:p-4 mobile:w-full mobile:mt-[50%]">
+                className="p-12 bg-black absolute w-3/12 mt-40 m-auto right-0 left-0 text-white bg-opacity-80 rounded-lg mobile:p-4 mobile:w-full mobile:mt-[50%] tablet:p-6 tablet:w-2/3">
                 <h1 className="font-bold text-3xl py-4 w-full">
                     {isSignIn ? 'Sign In' : 'Sign Up'}
                 </h1>
@@ -100,7 +100,7 @@ const Login = () => {
                 />
                 <p className="text-red-500 text-lg p-2">{errorMessage}</p>
                 <button
-                    className="py-4 m-2 mt-6 rounded-lg bg-red-700 w-full mobile:p-2 mobile:m-0"
+                    className="py-4 m-2 mt-6 rounded-lg bg-red-700 w-full mobile:p-2 mobile:m-0 tablet:p-2"
                     onClick={handleFormSubmission}>
                     {isSignIn ? 'Sign In' : 'Sign Up'}
                 </button>
